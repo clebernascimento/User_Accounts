@@ -19,6 +19,7 @@
 - Room
 - Data base SQLite
 - Coroutines
+- Navigation
 - Biblioteca para dimensões SD/DP
 
 ## Requisitos
