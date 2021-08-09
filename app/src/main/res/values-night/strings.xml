@@ -1,10 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">User Accounts</string>
     <string name="user_accounts">Contas de Usuario</string>
     <string name="text_hint_name">Nome</string>
     <string name="text_hint_user">Usuario</string>
     <string name="text_hint_password">Senha</string>
     <string name="text_hint_description">Descrição</string>
     <string name="text_save">Salvar</string>
-    <string name="text_delete">Remover</string>
 </resources>

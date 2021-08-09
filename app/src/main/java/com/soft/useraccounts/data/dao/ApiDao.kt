@@ -20,6 +20,6 @@ interface ApiDao {
     @Query("DELETE FROM accounts")
     suspend fun deleteAll()
 
-    @Query("SELECT * FROM subscriber")
+    @Query("SELECT * FROM accounts")
     suspend fun getAll(): List<AccountsEntity>
 }
