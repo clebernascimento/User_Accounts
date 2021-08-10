@@ -16,7 +16,11 @@ class AccountListViewModel (
     val allAccountsEvent: LiveData<List<AccountsEntity>>
         get() = _allAccountsEvent
 
-    fun getSubscribers() = viewModelScope.launch {
+    fun getAccounts() = viewModelScope.launch {
         _allAccountsEvent.postValue(repository.getAllAccounts())
+    }
+
+    fun getSearch(name: String) = viewModelScope.launch {
+        _allAccountsEvent.postValue(repository.getSearch(name))
     }
 }

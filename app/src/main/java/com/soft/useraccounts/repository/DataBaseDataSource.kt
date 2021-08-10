@@ -48,4 +48,8 @@ class DataBaseDataSource(private val apiDao: ApiDao) : AccountsRepository {
     override suspend fun getAllAccounts(): List<AccountsEntity> {
         return apiDao.getAll()
     }
+
+    override suspend fun getSearch(name: String): List<AccountsEntity> {
+       return apiDao.getSearch(name)
+    }
 }

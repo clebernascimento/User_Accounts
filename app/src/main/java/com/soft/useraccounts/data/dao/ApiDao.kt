@@ -22,4 +22,7 @@ interface ApiDao {
 
     @Query("SELECT * FROM accounts")
     suspend fun getAll(): List<AccountsEntity>
+
+    @Query("SELECT * FROM accounts WHERE name LIKE :name")
+    suspend fun getSearch(name: String): List<AccountsEntity>
 }

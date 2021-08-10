@@ -17,6 +17,7 @@ import com.soft.useraccounts.repository.AccountsRepository
 import com.soft.useraccounts.repository.DataBaseDataSource
 import com.soft.useraccounts.util.navigateWithAnimations
 import kotlinx.android.synthetic.main.account_list_fragment.*
+import kotlinx.android.synthetic.main.accounts_fragment.*
 
 class AccountListFragment : Fragment(R.layout.account_list_fragment) {
 
@@ -62,7 +63,7 @@ class AccountListFragment : Fragment(R.layout.account_list_fragment) {
 
     override fun onResume() {
         super.onResume()
-        viewModel.getSubscribers()
+        viewModel.getAccounts()
     }
 
     private fun configureViewListeners() {
