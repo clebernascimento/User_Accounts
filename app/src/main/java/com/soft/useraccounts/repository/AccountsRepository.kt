@@ -3,13 +3,13 @@ package com.soft.useraccounts.repository
 import com.soft.useraccounts.data.model.AccountsEntity
 
 interface AccountsRepository {
-    suspend fun insertSubscriber(name: String, user: String, password: String, description: String): Long
+    suspend fun insertAccounts(name: String, user: String, password: String, description: String): Long
 
-    suspend fun updateSubscriber(id: Long, name: String, user: String, password: String, description: String)
+    suspend fun updateAccounts(id: Long, name: String, user: String, password: String, description: String)
 
-    suspend fun deleteSubscriber(id: Long)
+    suspend fun deleteAccounts(id: Long)
 
-    suspend fun deleteAllSubscribers()
+    suspend fun deleteAllAccounts()
 
-    suspend fun getAllSubscribers(): List<AccountsEntity>
+    suspend fun getAllAccounts(): List<AccountsEntity>
 }

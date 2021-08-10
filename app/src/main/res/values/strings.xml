@@ -7,4 +7,12 @@
     <string name="text_hint_description">Descrição</string>
     <string name="text_save">Salvar</string>
     <string name="text_delete">Remover</string>
+    <string name="account_button_update">Editar</string>
+    <string name="account_inserted_successfully">Conta salva com sucesso</string>
+    <string name="account_update_successfully">Conta editada com sucesso</string>
+    <string name="account_error_to_insert">Erro ao salvar conta</string>
+    <string name="account_error_to_update">Erro ao editar conta</string>
+    <string name="account_deleted_successfully">Conta excluida com sucesso</string>
+    <string name="account_error_to_delete">Erro ao excluir conta</string>
+    <string name="list_user_accounts">Lista Usuario/Login</string>
 </resources>

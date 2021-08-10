@@ -61,4 +61,10 @@ dependencies {
     kapt "androidx.room:room-compiler:$room_version"
     // Kotlin Extensions and Coroutines support for Room
     implementation "androidx.room:room-ktx:$room_version"
+
+    //Dimens
+    def dimens_ssp = "1.0.5"
+    def dimens_sdp = "1.0.5"
+    implementation "com.intuit.ssp:ssp-android:$dimens_ssp"
+    implementation "com.intuit.sdp:sdp-android:$dimens_sdp"
 }

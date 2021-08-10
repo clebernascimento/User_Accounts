@@ -3,10 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
-    app:startDestination="@id/accountsFragment">
+    app:startDestination="@id/accountListFragment">
+
+    <fragment
+        android:id="@+id/accountListFragment"
+        android:name="com.soft.useraccounts.ui.accountList.AccountListFragment"
+        android:label="@string/list_user_accounts"
+        tools:layout="@layout/account_list_fragment" >
+        <action
+            android:id="@+id/action_accountListFragment_to_accountsFragment"
+            android:defaultValue="@null"
+            app:destination="@id/accountsFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/accountsFragment"
-        android:name="com.soft.useraccounts.ui.AccountsFragment"
-        android:label="@string/user_accounts" />
+        android:name="com.soft.useraccounts.ui.account.AccountsFragment"
+        android:label="@string/user_accounts"
+        tools:layout="@layout/accounts_fragment">
+
+        <argument
+            android:name="accounts"
+            app:argType="com.soft.useraccounts.data.model.AccountsEntity"
+            android:defaultValue="@null"
+            app:nullable="true" />
+    </fragment>
 </navigation>
