@@ -16,77 +16,58 @@
         android:padding="@dimen/_16sdp"
         tools:context=".ui.account.AccountsFragment">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_layout_name"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+        <EditText
+            android:id="@+id/input_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
             android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/layout_edit"
+            android:hint="@string/text_hint_name"
+            android:paddingStart="@dimen/_8sdp"
+            android:inputType="textCapSentences"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/input_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/text_hint_name"
-                android:inputType="textCapSentences" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_layout_user"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+        <EditText
+            android:id="@+id/input_user"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
             android:layout_marginTop="@dimen/_8sdp"
-            app:layout_constraintEnd_toEndOf="@id/input_layout_name"
-            app:layout_constraintStart_toStartOf="@id/input_layout_name"
-            app:layout_constraintTop_toBottomOf="@id/input_layout_name">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/input_user"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/text_hint_user"
-                android:inputType="textEmailAddress" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_layout_pass"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/layout_edit"
+            android:hint="@string/text_hint_user"
+            android:paddingStart="@dimen/_8sdp"
+            android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/input_layout_user">
+            app:layout_constraintTop_toBottomOf="@id/input_name" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/input_pass"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/text_hint_password"
-                android:inputType="textCapSentences" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_layout_description"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+        <EditText
+            android:id="@+id/input_pass"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
             android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/layout_edit"
+            android:hint="@string/text_hint_password"
+            android:paddingStart="@dimen/_8sdp"
+            android:inputType="textCapSentences"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/input_layout_pass">
+            app:layout_constraintTop_toBottomOf="@+id/input_user" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/input_description"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/text_hint_description"
-                android:inputType="textEmailAddress" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+        <EditText
+            android:id="@+id/input_description"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/layout_edit"
+            android:hint="@string/text_hint_description"
+            android:paddingStart="@dimen/_8sdp"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_pass" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bt_account"
@@ -98,17 +79,17 @@
             android:textColor="@color/white_xd"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/input_layout_description" />
+            app:layout_constraintTop_toBottomOf="@+id/input_description" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bt_delete"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_16sdp"
             android:background="@android:color/holo_red_dark"
             android:text="@string/text_delete"
-            android:visibility="visible"
             android:textColor="@color/white_xd"
+            android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bt_account" />

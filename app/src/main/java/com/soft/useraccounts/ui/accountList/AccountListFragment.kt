@@ -6,9 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SearchView
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModel
 import androidx.navigation.fragment.findNavController
+import com.soft.useraccounts.MainActivity
 import com.soft.useraccounts.R
 import com.soft.useraccounts.data.AppDataBase
 import com.soft.useraccounts.repository.AccountsRepository
@@ -38,18 +40,22 @@ class AccountListFragment : Fragment(R.layout.account_list_fragment) {
 
     private fun observeViewModelEvents() {
         viewModel.allAccountsEvent.observe(viewLifecycleOwner) { allAccounts ->
-            val subscriberListAdapter = AccountAdapter(allAccounts).apply {
-                onItemClick = { accounts ->
-                    val directions = AccountListFragmentDirections
-                        .actionAccountListFragmentToAccountsFragment(accounts)
+            val accountListAdapter = AccountAdapter(allAccounts).apply {
+                if (allAccounts.isNotEmpty()) {
+                    tv_NoList.visibility = View.GONE
+                    onItemClick = { accounts ->
+                        val directions = AccountListFragmentDirections
+                            .actionAccountListFragmentToAccountsFragment(accounts)
 
-                    findNavController().navigateWithAnimations(directions)
+                        findNavController().navigateWithAnimations(directions)
+                    }
+                } else {
+                    tv_NoList.visibility = View.VISIBLE
                 }
             }
-
             with(recycler_accounts) {
                 setHasFixedSize(true)
-                adapter = subscriberListAdapter
+                adapter = accountListAdapter
             }
         }
     }

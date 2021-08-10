@@ -13,13 +13,30 @@
         android:background="@color/white_xd"
         tools:context=".ui.accountList.AccountListFragment">
 
-        <SearchView
-            android:id="@+id/searchView"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_search"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_xd"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_margin="@dimen/_8sdp"
+                android:background="@drawable/layout_search"
+                android:iconifiedByDefault="false"
+                android:inputType="text"
+                android:queryHint="Pesquisar login"
+                app:boxStrokeColor="@color/green_xd"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_accounts"
@@ -29,7 +46,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/searchView"
+            app:layout_constraintTop_toBottomOf="@+id/layout_search"
             tools:listitem="@layout/item_accounts" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -38,9 +55,24 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end|bottom"
             android:layout_margin="@dimen/_16sdp"
+            android:background="#076481"
             android:src="@drawable/ic_add"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_NoList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ainda não à contas/usuario cadastrado."
+            android:textSize="@dimen/_14ssp"
+            android:gravity="center"
+            android:textColor="#076481"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

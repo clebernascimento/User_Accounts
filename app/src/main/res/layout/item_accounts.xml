@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-   android:layout_margin="@dimen/_16sdp"
+    android:layout_margin="@dimen/_8sdp"
     app:cardCornerRadius="@dimen/_4sdp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-       android:padding="@dimen/_16sdp">
+        android:background="@color/blue_xd"
+        android:padding="@dimen/_16sdp">
 
         <TextView
             android:id="@+id/text_account_name"
@@ -19,6 +20,7 @@
             android:layout_height="wrap_content"
             android:textSize="@dimen/_16ssp"
             android:textStyle="bold"
+            android:textColor="@color/white_xd"
             tools:text="Havan" />
 
         <TextView
