@@ -87,9 +87,9 @@ class AccountsFragment : Fragment(R.layout.accounts_fragment) {
     private fun setListeners() {
         bt_account.setOnClickListener {
             val name = input_name.text.toString()
-            val user = input_user.text.toString()
-            val pass = input_pass.text.toString()
-            val desc = input_description.text.toString()
+            val user = "Usuario: " + input_user.text.toString()
+            val pass = "Senha: " + input_pass.text.toString()
+            val desc = "Descrição: " + input_description.text.toString()
 
             viewModel.addUpdateAccounts(name, user, pass, desc, args.accounts?.id ?: 0)
         }

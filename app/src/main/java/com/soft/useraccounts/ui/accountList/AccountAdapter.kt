@@ -9,7 +9,10 @@ import com.soft.useraccounts.R
 import com.soft.useraccounts.data.model.AccountsEntity
 import kotlinx.android.synthetic.main.item_accounts.view.*
 
-class AccountAdapter(private val accounts: List<AccountsEntity>) :
+class AccountAdapter(
+    val accounts: MutableList<AccountsEntity> = mutableListOf(),
+    val listener: AccountListFragment
+) :
     RecyclerView.Adapter<AccountAdapter.AccountViewHolder>() {
 
     var onItemClick: ((entity: AccountsEntity) -> Unit)? = null
