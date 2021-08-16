@@ -15,14 +15,14 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white_xd"
+        android:background="@drawable/layout_account"
         tools:context=".ui.accountList.AccountListFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layout_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/blue_xd"
+            android:layout_marginTop="@dimen/_8sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -33,8 +33,10 @@
                 app:boxStrokeColor="@color/green_xd"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.523"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.476" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

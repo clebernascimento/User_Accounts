@@ -78,7 +78,7 @@
         <item name="android:layout_marginTop">@dimen/_8sdp</item>
         <item name="android:background">@drawable/layout_edit</item>
         <item name="android:paddingStart">@dimen/_8sdp</item>
-        <item name="android:inputType">textEmailAddress</item>
+        <item name="android:inputType">textCapSentences</item>
     </style>
 
     <style name="input_pass">
@@ -87,7 +87,7 @@
         <item name="android:layout_marginTop">@dimen/_8sdp</item>
         <item name="android:background">@drawable/layout_edit</item>
         <item name="android:paddingStart">@dimen/_8sdp</item>
-        <item name="android:inputType">textCapSentences</item>
+        <item name="android:inputType">text</item>
     </style>
 
     <style name="input_description">
@@ -96,11 +96,11 @@
         <item name="android:layout_marginTop">@dimen/_8sdp</item>
         <item name="android:background">@drawable/layout_edit</item>
         <item name="android:paddingStart">@dimen/_8sdp</item>
-        <item name="android:inputType">textEmailAddress</item>
+        <item name="android:inputType">textCapSentences</item>
     </style>
 
     <style name="bt_account">
-        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">@dimen/_16sdp</item>
         <item name="android:background">@color/green_xd</item>
@@ -108,7 +108,7 @@
     </style>
 
     <style name="bt_delete">
-        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">@dimen/_16sdp</item>
         <item name="android:background">@android:color/holo_red_dark</item>
