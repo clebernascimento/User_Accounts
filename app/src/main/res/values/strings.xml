@@ -16,4 +16,5 @@
     <string name="account_error_to_delete">Erro ao excluir conta</string>
     <string name="list_user_accounts">Lista de Logins</string>
     <string name="text_erro_list">Ops! Nada Encontrado!</string>
+    <string name="text_title">Crie/Edite suas informções de login</string>
 </resources>
