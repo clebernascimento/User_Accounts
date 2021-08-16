@@ -132,7 +132,7 @@ class AccountListFragment : Fragment(R.layout.account_list_fragment) {
                         }
                     }
                     if (listName.isNullOrEmpty()) {
-                        tv_NoList.visibility = View.VISIBLE
+                       utilList.setError()
                     }
                 }
                 updateRecyclerView()

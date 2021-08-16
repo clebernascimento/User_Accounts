@@ -9,17 +9,17 @@ class UtilList(val accountListFragment: FragmentActivity) {
     fun setLoading() {
         accountListFragment.progressBar.visibility = View.VISIBLE
         accountListFragment.recycler_accounts.visibility = View.GONE
-        accountListFragment.tv_NoList.visibility = View.GONE
+        accountListFragment.layout_error.visibility = View.GONE
     }
 
     fun setSuccess() {
         accountListFragment.recycler_accounts.visibility = View.VISIBLE
         accountListFragment.progressBar.visibility = View.GONE
-        accountListFragment.tv_NoList.visibility = View.GONE
+        accountListFragment.layout_error.visibility = View.GONE
     }
 
     fun setError() {
-        accountListFragment.tv_NoList.visibility = View.VISIBLE
+        accountListFragment.layout_error.visibility = View.VISIBLE
         accountListFragment.recycler_accounts.visibility = View.GONE
         accountListFragment.progressBar.visibility = View.GONE
     }

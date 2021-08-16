@@ -1,55 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/_6sdp"
-    android:layout_marginStart="@dimen/_8sdp"
-    android:layout_marginEnd="@dimen/_8sdp"
-    app:cardCornerRadius="@dimen/_4sdp">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+    <data>
+
+        <import type="com.soft.useraccounts.data.model.AccountsEntity" />
+
+        <variable
+            name="accountsEntity"
+            type="AccountsEntity" />
+    </data>
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@color/blue_xd"
-        android:padding="@dimen/_16sdp">
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        app:cardCornerRadius="@dimen/_4sdp">
 
-        <TextView
-            android:id="@+id/text_account_name"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/_16ssp"
-            android:textStyle="bold"
-            android:inputType="text"
-            android:textColor="@color/white_xd"
-            tools:text="Havan" />
+            android:background="@color/blue_xd"
+            android:orientation="vertical"
+            android:padding="@dimen/_16sdp">
 
-        <TextView
-            android:id="@+id/text_account_user"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:inputType="text"
-            tools:text="Usuario" />
+            <TextView
+                android:id="@+id/text_account_name"
+                style="@style/text_account_name"
+                android:text="@{accountsEntity.name == null ? `` : accountsEntity.name}"
+                tools:text="Havan" />
 
-        <TextView
-            android:id="@+id/text_account_pass"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:inputType="text"
-            tools:text="Senha" />
+            <TextView
+                android:id="@+id/text_account_user"
+                style="@style/text_account_user"
+                android:text="@{accountsEntity.user == null ? `` : accountsEntity.user}"
+                tools:text="Usuario" />
 
-        <TextView
-            android:id="@+id/text_account_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:inputType="textPersonName"
-            tools:text="Descrição" />
+            <TextView
+                android:id="@+id/text_account_pass"
+                style="@style/text_account_pass"
+                android:text="@{accountsEntity.password == null ? `` : accountsEntity.password}"
+                tools:text="Senha" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/text_account_description"
+                style="@style/text_account_description"
+                android:text="@{accountsEntity.description == null ? `` : accountsEntity.description}"
+                tools:text="Descrição" />
 
-</androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -5,6 +5,11 @@
 
     <data>
 
+        <import type="com.soft.useraccounts.ui.accountList.AccountListViewModel" />
+
+        <variable
+            name="viewModel"
+            type="AccountListViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,13 +29,7 @@
 
             <SearchView
                 android:id="@+id/searchView"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_margin="@dimen/_8sdp"
-                android:background="@drawable/layout_search"
-                android:iconifiedByDefault="false"
-                android:inputType="text"
-                android:queryHint="Pesquisar login"
+                style="@style/style_search"
                 app:boxStrokeColor="@color/green_xd"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -53,40 +52,46 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fabAddAccounts"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end|bottom"
-            android:layout_margin="@dimen/_16sdp"
-            android:background="#076481"
+            style="@style/style_fab"
             android:src="@drawable/ic_add"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_NoList"
+        <LinearLayout
+            android:id="@+id/layout_error"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ainda não à contas/usuario cadastrado."
-            android:textSize="@dimen/_14ssp"
             android:gravity="center"
-            android:textColor="#076481"
-            android:visibility="visible"
+            android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/layout_search">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/opLottie"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_150sdp"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="suport.json"
+                app:lottie_loop="true" />
+
+            <TextView
+                style="@style/style_error"
+                android:text="@string/text_erro_list" />
+
+        </LinearLayout>
 
         <ProgressBar
             android:id="@+id/progressBar"
             style="?android:attr/progressBarStyle"
-            android:visibility="visible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/layout_search" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

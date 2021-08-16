@@ -5,6 +5,10 @@
 
     <data>
 
+        <import type="com.soft.useraccounts.ui.account.AccountsViewModel"/>
+        <variable
+            name="viewModel"
+            type="AccountsViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,39 +22,24 @@
 
         <EditText
             android:id="@+id/input_name"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:background="@drawable/layout_edit"
+            style="@style/input_name"
             android:hint="@string/text_hint_name"
-            android:paddingStart="@dimen/_8sdp"
-            android:inputType="textCapSentences"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/input_user"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:background="@drawable/layout_edit"
+            style="@style/input_user"
             android:hint="@string/text_hint_user"
-            android:paddingStart="@dimen/_8sdp"
-            android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/input_name" />
 
         <EditText
             android:id="@+id/input_pass"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:background="@drawable/layout_edit"
+            style="@style/input_pass"
             android:hint="@string/text_hint_password"
-            android:paddingStart="@dimen/_8sdp"
-            android:inputType="textCapSentences"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/input_user" />
@@ -58,38 +47,24 @@
 
         <EditText
             android:id="@+id/input_description"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:background="@drawable/layout_edit"
+            style="@style/input_description"
             android:hint="@string/text_hint_description"
-            android:paddingStart="@dimen/_8sdp"
-            android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/input_pass" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bt_account"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_16sdp"
-            android:background="@color/green_xd"
+            style="@style/bt_account"
             android:text="@string/text_save"
-            android:textColor="@color/white_xd"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/input_description" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bt_delete"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_16sdp"
-            android:background="@android:color/holo_red_dark"
+            style="@style/bt_delete"
             android:text="@string/text_delete"
-            android:textColor="@color/white_xd"
-            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bt_account" />
