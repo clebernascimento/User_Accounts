@@ -89,7 +89,7 @@
             android:background="@android:color/holo_red_dark"
             android:text="@string/text_delete"
             android:textColor="@color/white_xd"
-            android:visibility="visible"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bt_account" />

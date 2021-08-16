@@ -15,22 +15,20 @@ class AccountAdapter(
 ) :
     RecyclerView.Adapter<AccountAdapter.AccountViewHolder>() {
 
-    var onItemClick: ((entity: AccountsEntity) -> Unit)? = null
-
     inner class AccountViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val textAccountName: TextView = itemView.text_account_name
-        private val textAccountUser: TextView = itemView.text_account_user
-        private val textAccountPassword: TextView = itemView.text_account_pass
-        private val textAccountDescription: TextView = itemView.text_account_description
-
         fun bindView(account: AccountsEntity) {
-            textAccountName.text = account.name
-            textAccountUser.text = account.user
-            textAccountPassword.text = account.password
-            textAccountDescription.text = account.description
-
-            itemView.setOnClickListener {
-                onItemClick?.invoke(account)
+            itemView.apply {
+                text_account_name.text = account.name
+                text_account_user.text = account.user
+                text_account_pass.text = account.password
+                text_account_description.text = account.description
+            }
+        }
+        fun bindClick(waterfallClick: AccountsEntity?, position: Int, listener: AccountListFragment) {
+            itemView.setOnClickListener { view: View? ->
+                if (waterfallClick != null) {
+                    listener.onItemClick(waterfallClick, position)
+                }
             }
         }
     }
@@ -42,9 +40,18 @@ class AccountAdapter(
     }
 
     override fun onBindViewHolder(holder: AccountAdapter.AccountViewHolder, position: Int) {
+        val water = accounts[position]
         holder.bindView(accounts[position])
+        holder.bindClick(water, position, listener)
     }
 
     override fun getItemCount(): Int = accounts.size
 
+    fun addAccounts(account: List<AccountsEntity>){
+        this.accounts.apply {
+            clear()
+            addAll(account)
+            notifyDataSetChanged()
+        }
+    }
 }
