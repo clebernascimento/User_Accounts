@@ -3,15 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/120339/.gradle/caches/transforms-3/a7d78e8eb99b67d321b9e4e21a269ceb/transformed/material-1.4.0/res/drawable/avd_show_password.xml" value="0.38333333333333336" />
         <entry key="..\:/Users/120339/Desktop/My-App/Android/UserAccounts/app/src/main/res/drawable/cursor_text.xml" value="0.38333333333333336" />
         <entry key="..\:/Users/120339/Desktop/My-App/Android/UserAccounts/app/src/main/res/drawable/ic_add.xml" value="0.38333333333333336" />
         <entry key="..\:/Users/120339/Desktop/My-App/Android/UserAccounts/app/src/main/res/drawable/ic_back.xml" value="0.38333333333333336" />
         <entry key="..\:/Users/120339/Desktop/My-App/Android/UserAccounts/app/src/main/res/drawable/ic_search.xml" value="0.38333333333333336" />
+        <entry key="..\:/Users/120339/Desktop/My-App/Android/UserAccounts/app/src/main/res/drawable/ic_visibility.xml" value="0.38333333333333336" />
+        <entry key="..\:/Users/120339/Desktop/My-App/Android/UserAccounts/app/src/main/res/drawable/ic_visibility_off.xml" value="0.38333333333333336" />
         <entry key="..\:/Users/120339/Desktop/My-App/Android/UserAccounts/app/src/main/res/drawable/layout_account.xml" value="0.38333333333333336" />
         <entry key="..\:/Users/120339/Desktop/My-App/Android/UserAccounts/app/src/main/res/drawable/layout_bottom_delete.xml" value="0.38333333333333336" />
         <entry key="..\:/Users/120339/Desktop/My-App/Android/UserAccounts/app/src/main/res/drawable/layout_bottom_save.xml" value="0.38333333333333336" />
         <entry key="..\:/Users/120339/Desktop/My-App/Android/UserAccounts/app/src/main/res/drawable/layout_edit.xml" value="0.38333333333333336" />
         <entry key="..\:/Users/120339/Desktop/My-App/Android/UserAccounts/app/src/main/res/drawable/layout_search.xml" value="0.38333333333333336" />
+        <entry key="..\:/Users/120339/Desktop/My-App/Android/UserAccounts/app/src/main/res/drawable/pass.xml" value="0.38333333333333336" />
         <entry key="..\:/Users/120339/Desktop/My-App/Android/UserAccounts/app/src/main/res/layout-v21/activity_main.xml" value="0.3671875" />
         <entry key="..\:/Users/120339/Desktop/My-App/Android/UserAccounts/app/src/main/res/layout/account_list_fragment.xml" value="0.3671875" />
         <entry key="..\:/Users/120339/Desktop/My-App/Android/UserAccounts/app/src/main/res/layout/accounts_fragment.xml" value="0.353125" />

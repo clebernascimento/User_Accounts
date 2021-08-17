@@ -39,11 +39,38 @@
                 android:text="@{accountsEntity.user == null ? `` : accountsEntity.user}"
                 tools:text="Usuario" />
 
-            <TextView
-                android:id="@+id/text_account_pass"
-                style="@style/text_account_pass"
-                android:text="@{accountsEntity.password == null ? `` : accountsEntity.password}"
-                tools:text="Senha" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_account_pass"
+                    style="@style/text_account_pass"
+                    android:text="@{accountsEntity.password == null ? `` : accountsEntity.password}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imgPass"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Senha" />
+
+                <ImageView
+                    android:id="@+id/imgPass"
+                    style="@style/imgPass"
+                    android:src="@drawable/ic_visibility_off"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgPassOff"
+                    style="@style/imgPassOff"
+                    android:src="@drawable/ic_visibility"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
                 android:id="@+id/text_account_description"

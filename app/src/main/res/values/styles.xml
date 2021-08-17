@@ -45,19 +45,10 @@
         <item name="android:textColor">@color/white_xd</item>
     </style>
 
-    <style name="text_account_pass">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">@dimen/_8sdp</item>
-        <item name="android:fontFamily">@font/roboto</item>
-        <item name="android:inputType">text</item>
-        <item name="android:textColor">@color/white_xd</item>
-    </style>
 
     <style name="text_account_description">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">@dimen/_8sdp</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:inputType">text</item>
         <item name="android:textColor">@color/white_xd</item>
@@ -114,5 +105,29 @@
         <item name="android:background">@android:color/holo_red_dark</item>
         <item name="android:textColor">@color/white_xd</item>
         <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="imgPass">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/_8sdp</item>
+        <item name="android:visibility">visible</item>
+    </style>
+
+    <style name="imgPassOff">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/_8sdp</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="text_account_pass">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_marginTop">@dimen/_8sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_8sdp</item>
+        <item name="android:inputType">textPassword</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/white_xd</item>
     </style>
 </resources>

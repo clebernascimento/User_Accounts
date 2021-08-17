@@ -2,6 +2,7 @@ package com.soft.useraccounts.ui.accountList
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.text.InputType
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.SearchView
@@ -22,6 +23,10 @@ import kotlinx.android.synthetic.main.account_list_fragment.*
 import kotlinx.android.synthetic.main.accounts_fragment.*
 import kotlinx.android.synthetic.main.accounts_fragment.view.*
 import kotlinx.android.synthetic.main.item_accounts.*
+import android.text.method.PasswordTransformationMethod
+
+
+
 
 class AccountListFragment : Fragment(R.layout.account_list_fragment) {
 
@@ -96,7 +101,7 @@ class AccountListFragment : Fragment(R.layout.account_list_fragment) {
 
     fun onItemClick(waterfall: AccountsEntity?, position: Int) {
         if (waterfall != null) {
-          val directions = AccountListFragmentDirections
+            val directions = AccountListFragmentDirections
               .actionAccountListFragmentToAccountsFragment(waterfall)
             findNavController().navigateWithAnimations(directions)
             adapter.notifyItemChanged(position)

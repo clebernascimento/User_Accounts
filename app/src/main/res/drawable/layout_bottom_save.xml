@@ -2,7 +2,7 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android" >
     <!-- Normal state -->
     <item android:state_pressed="false">
-        <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+        <shape android:shape="rectangle">
             <solid android:color="@color/green_xd" />
             <stroke android:width="1px" android:color="@color/green_xd" />
             <corners android:radius="@dimen/_8sdp"/>
@@ -10,7 +10,7 @@
     </item>
     <!-- Pressed state -->
     <item android:state_pressed="true" >
-        <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+        <shape android:shape="rectangle">
             <solid android:color="#56AFA4" />
             <stroke android:width="1px" android:color="#56AFA4" />
             <corners android:radius="@dimen/_8sdp"/>
