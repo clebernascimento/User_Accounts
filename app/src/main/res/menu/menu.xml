@@ -4,7 +4,20 @@
     <item
         android:id="@+id/appSearchBar"
         android:icon="@drawable/ic_search"
-        android:title="Search"
+        android:title="@string/text_search"
+        android:contentDescription="@string/text_search"
         app:actionViewClass="android.widget.SearchView"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="ifRoom|withText" />
+
+    <item
+        android:id="@+id/share"
+        android:title="Compartilhar App"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/version"
+        android:title="Versão"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="never" />
 </menu>

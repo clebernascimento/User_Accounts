@@ -16,4 +16,5 @@
     <string name="list_user_accounts">Lista de Logins</string>
     <string name="text_erro_list">Ops! Nada Encontrado!</string>
     <string name="text_title">Crie/Edite suas informções de login</string>
+    <string name="text_search">Pesquisa</string>
 </resources>

@@ -1,16 +1,19 @@
 package com.soft.useraccounts.ui.accountList
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import android.text.InputType
-import androidx.fragment.app.Fragment
+import android.view.Menu
+import android.view.MenuInflater
 import android.view.View
 import android.widget.SearchView
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.soft.useraccounts.BuildConfig
+import com.soft.useraccounts.MainActivity
 import com.soft.useraccounts.R
 import com.soft.useraccounts.data.AppDataBase
 import com.soft.useraccounts.data.model.AccountsEntity
@@ -23,10 +26,6 @@ import kotlinx.android.synthetic.main.account_list_fragment.*
 import kotlinx.android.synthetic.main.accounts_fragment.*
 import kotlinx.android.synthetic.main.accounts_fragment.view.*
 import kotlinx.android.synthetic.main.item_accounts.*
-import android.text.method.PasswordTransformationMethod
-
-
-
 
 class AccountListFragment : Fragment(R.layout.account_list_fragment) {
 
@@ -44,10 +43,12 @@ class AccountListFragment : Fragment(R.layout.account_list_fragment) {
     private lateinit var adapter: AccountAdapter
     private lateinit var utilList: UtilList
 
+    private lateinit var mainActivity: MainActivity
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        searchAccountSetup()
+        setHasOptionsMenu(true)
         observeViewModelEvents()
         configureViewListeners()
         setupUI()
@@ -58,6 +59,7 @@ class AccountListFragment : Fragment(R.layout.account_list_fragment) {
         activity?.let {
             val list = it
             utilList = UtilList(list)
+            mainActivity = (requireActivity() as MainActivity)
         }
         viewModel.getAccounts()
     }
@@ -81,8 +83,12 @@ class AccountListFragment : Fragment(R.layout.account_list_fragment) {
             allAccounts.let { resources ->
                 when (resources.status) {
                     Status.SUCCESS -> {
-                        utilList.setSuccess()
-                        resources.data?.let(::retrieveList)
+                        if (resources.data?.isNullOrEmpty() == true) {
+                            utilList.setError()
+                        } else {
+                            utilList.setSuccess()
+                            resources.data?.let(::retrieveList)
+                        }
                     }
                     Status.ERROR -> {
                         utilList.setError()
@@ -102,24 +108,31 @@ class AccountListFragment : Fragment(R.layout.account_list_fragment) {
     fun onItemClick(waterfall: AccountsEntity?, position: Int) {
         if (waterfall != null) {
             val directions = AccountListFragmentDirections
-              .actionAccountListFragmentToAccountsFragment(waterfall)
+                .actionAccountListFragmentToAccountsFragment(waterfall)
             findNavController().navigateWithAnimations(directions)
             adapter.notifyItemChanged(position)
         }
     }
 
-    private fun searchAccountSetup() {
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        mainActivity.menuInflater.inflate(R.menu.menu, menu)
+        val search = menu.findItem(R.id.appSearchBar)
+        val versionn = menu.findItem(R.id.version)
+        versionn.setTitle("Versão " + BuildConfig.VERSION_NAME)
+        val searchView = search.actionView as SearchView
+        searchView.queryHint = "Pesquisar Logins"
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String): Boolean {
+            override fun onQueryTextSubmit(query: String?): Boolean {
                 search(query)
                 return false
             }
 
-            override fun onQueryTextChange(newText: String): Boolean {
+            override fun onQueryTextChange(newText: String?): Boolean {
                 search(newText)
-                return false
+                return true
             }
         })
+        return super.onCreateOptionsMenu(menu, inflater)
     }
 
     private fun search(text: String?) {
@@ -137,7 +150,7 @@ class AccountListFragment : Fragment(R.layout.account_list_fragment) {
                         }
                     }
                     if (listName.isNullOrEmpty()) {
-                       utilList.setError()
+                        utilList.setError()
                     }
                 }
                 updateRecyclerView()
