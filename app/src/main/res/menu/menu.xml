@@ -10,14 +10,20 @@
         app:showAsAction="ifRoom|withText" />
 
     <item
+        android:id="@+id/assessment"
+        android:title="@string/text_assessment"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/share"
-        android:title="Compartilhar App"
+        android:title="@string/text_share_app"
         app:actionViewClass="android.widget.SearchView"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/version"
-        android:title="Versão"
+        android:title="@string/text_version"
         app:actionViewClass="android.widget.SearchView"
         app:showAsAction="never" />
 </menu>

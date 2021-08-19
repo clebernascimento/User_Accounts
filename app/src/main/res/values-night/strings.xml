@@ -17,4 +17,8 @@
     <string name="text_erro_list">Ops! Nada Encontrado!</string>
     <string name="text_title">Crie/Edite suas informções de login</string>
     <string name="text_search">Pesquisa</string>
+    <string name="text_version">Versão</string>
+    <string name="text_share_app">Compartilhar App</string>
+    <string name="text_search_login">Pesquisar Logins</string>
+    <string name="text_assessment">Avalie nosso App</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.soft.useraccounts.ui.accountList
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
@@ -114,13 +115,14 @@ class AccountListFragment : Fragment(R.layout.account_list_fragment) {
         }
     }
 
+    @SuppressLint("ResourceType")
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         mainActivity.menuInflater.inflate(R.menu.menu, menu)
         val search = menu.findItem(R.id.appSearchBar)
-        val versionn = menu.findItem(R.id.version)
-        versionn.setTitle("Versão " + BuildConfig.VERSION_NAME)
+        val version = menu.findItem(R.id.version)
+        version.title = "${getString(R.string.text_version)} " + BuildConfig.VERSION_NAME
         val searchView = search.actionView as SearchView
-        searchView.queryHint = "Pesquisar Logins"
+        searchView.queryHint = getString(R.string.text_search_login)
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 search(query)

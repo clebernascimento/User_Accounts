@@ -11,12 +11,42 @@ android {
 
     defaultConfig {
         applicationId "com.soft.useraccounts"
+        flavorDimensions "default"
         minSdk 21
         targetSdk 31
         versionCode 1
-        versionName "0.1.1"
+        versionName "1.1.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    productFlavors {
+
+        production {
+            resValue "string", "app_name", "AppLogin"
+            resValue "string", "APP_ID", "com.soft.useraccounts"
+
+            buildConfigField("String", "BASE_URL", "\"http://10.0.0.107:8080\"")
+            buildConfigField("String", "APP_CENTER_KEY", "\"49a6fca2-7ade-4a0e-847b-e86baaa2cf88\"")
+            buildConfigField("Boolean", "ANALYTICS", "true")
+        }
+
+        homolog {
+            versionCode 7
+            versionName "1.1.1"
+
+            resValue "string", "app_name", "AppLogin Beta"
+            resValue "string", "APP_ID", "com.soft.useraccounts.beta"
+
+            buildConfigField("String", "BASE_URL", "\"http://10.0.0.107:8080\"")
+            buildConfigField("String", "APP_CENTER_KEY", "\"49a6fca2-7ade-4a0e-847b-e86baaa2cf88\"")
+            buildConfigField("Boolean", "ANALYTICS", "true")
+        }
+
+        dev {
+            buildConfigField("String", "BASE_URL", "\"http://10.0.0.107:8080\"")
+            buildConfigField("boolean", "IS_EMULATOR", "false")
+        }
     }
 
     buildTypes {
