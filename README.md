@@ -1,7 +1,9 @@
 # User_Accounts
 
 <p align="center">
-    <img src="https://github.com/clebernascimento/Chock_Norris/blob/master/app/src/main/res/drawable/chock_norriss.JPG"/>
+    <img src="https://github.com/clebernascimento/User_Accounts/blob/master/app/src/main/res/drawable/app_login_list.JPG"/>
+     <img src="https://github.com/clebernascimento/User_Accounts/blob/master/app/src/main/res/drawable/app_login_create.JPG"/>
+      <img src="https://github.com/clebernascimento/User_Accounts/blob/master/app/src/main/res/drawable/app_login_edit.JPG"/>
     </br>
     <a href="readme_en.md">English</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="readme.md">Português</a>&nbsp;&nbsp;&nbsp;
@@ -20,6 +22,7 @@
 - Data base SQLite
 - Coroutines
 - Navigation
+- Flavors Gradle
 - Biblioteca para dimensões SD/DP
 
 ## Requisitos
