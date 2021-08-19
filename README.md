@@ -1,9 +1,9 @@
 # User_Accounts
 
 <p align="center">
-    <img src="https://github.com/clebernascimento/User_Accounts/blob/master/app/src/main/res/drawable/app_login_list.JPG"/>
-     <img src="https://github.com/clebernascimento/User_Accounts/blob/master/app/src/main/res/drawable/app_login_create.JPG"/>
-      <img src="https://github.com/clebernascimento/User_Accounts/blob/master/app/src/main/res/drawable/app_login_edit.JPG"/>
+    <img src="https://github.com/clebernascimento/User_Accounts/blob/master/app/src/main/res/drawable/app_login_list.png"/>
+     <img src="https://github.com/clebernascimento/User_Accounts/blob/master/app/src/main/res/drawable/app_login_create.png"/>
+      <img src="https://github.com/clebernascimento/User_Accounts/blob/master/app/src/main/res/drawable/app_login_edit.png"/>
     </br>
     <a href="readme_en.md">English</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="readme.md">Português</a>&nbsp;&nbsp;&nbsp;
