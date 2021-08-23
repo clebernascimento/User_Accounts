@@ -69,8 +69,7 @@ class AccountAdapter(
     fun addAccounts(account: List<AccountsEntity>) {
         this.accounts.apply {
             clear()
-            addAll(account)
-            notifyDataSetChanged()
+            addAll(0,account)
         }
     }
 }

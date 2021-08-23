@@ -1,4 +1,4 @@
-package com.soft.useraccounts
+package com.soft.useraccounts.ui.accountList
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

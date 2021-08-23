@@ -102,6 +102,17 @@ dependencies {
     implementation "com.intuit.sdp:sdp-android:$dimens_sdp"
 
     // lottie
-    def lottieVersion = "3.4.0"
+    def lottieVersion = "3.6.1"
     implementation "com.airbnb.android:lottie:$lottieVersion"
+
+    // Core library
+    androidTestImplementation 'androidx.test:core:1.4.0'
+
+    // AndroidJUnitRunner and JUnit Rules
+    androidTestImplementation 'androidx.test:runner:1.4.0'
+    androidTestImplementation 'androidx.test:rules:1.4.0'
+
+    // Espresso dependencies
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.4.0'
 }
