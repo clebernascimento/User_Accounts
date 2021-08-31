@@ -14,7 +14,7 @@ import com.soft.useraccounts.MainActivity
 import com.soft.useraccounts.R
 import kotlinx.android.synthetic.main.activity_splash.*
 
-class SplashActivity : AppCompatActivity((R.layout.activity_splash)) {
+class SplashActivity : AppCompatActivity(R.layout.activity_splash) {
 
     private var animation: Animation? = null
     private val SPLASH_DELAY = 3000
