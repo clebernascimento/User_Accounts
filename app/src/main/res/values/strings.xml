@@ -1,5 +1,5 @@
 <resources>
-<!--    <string name="app_name">Login Usuário</string>-->
+    <!--    <string name="app_name">Login Usuário</string>-->
     <string name="user_accounts">Criar Login</string>
     <string name="text_hint_name">Nome</string>
     <string name="text_hint_user">Usuario</string>
