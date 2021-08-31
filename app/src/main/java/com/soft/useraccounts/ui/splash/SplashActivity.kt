@@ -1,4 +1,4 @@
-package com.soft.useraccounts.ui
+package com.soft.useraccounts.ui.splash
 
 import android.content.Intent
 import android.content.res.Configuration
