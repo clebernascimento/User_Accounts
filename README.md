@@ -1,5 +1,7 @@
 # User_Accounts
 
+- Mini Projeto desenvolvido na linguagem Kotlin com arquitetura MVVM, para salvar login ou contas no BD integrado no dispositivo usando SQLITE
+
 <p align="center">
  <img src="https://github.com/clebernascimento/User_Accounts/blob/master/app/src/main/res/drawable/app_splash.png"/>
     <img src="https://github.com/clebernascimento/User_Accounts/blob/master/app/src/main/res/drawable/app_login_list.png"/>
